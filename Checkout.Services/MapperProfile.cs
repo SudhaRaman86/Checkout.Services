@@ -1,7 +1,4 @@
-﻿using Checkout.Services.Model;
-using AutoMapper;
-
-namespace Checkout.Services
+﻿namespace Checkout.Services
 {
     public class MapperProfile
     {

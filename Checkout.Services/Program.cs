@@ -1,6 +1,6 @@
-using Checkout.Repositoriess;
+using Checkout.Repository;
 using Checkout.Services;
-using Service.Interfaces;
+using Service.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MapperProfile));
+builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddScoped<IRepository, Repository>();
 //builder.Services.AddDbContext<DbContext>(options =>
 //    options.UseSqlServer(connectionStringCore)

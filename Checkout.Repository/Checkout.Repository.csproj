@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Checkout.Service.Interface\Checkout.Service.Interface.csproj" />
+    <ProjectReference Include="..\Checkout.Service.Model\Checkout.Service.Model.csproj" />
+    <ProjectReference Include="..\Checkout.Services.Utils\Checkout.Services.Utils.csproj" />
+  </ItemGroup>
+
+</Project>

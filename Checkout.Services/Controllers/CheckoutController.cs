@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Service.Interfaces;
-using Services.Interfaces.Requests;
+using Service.Interface;
+using Service.Interface.Requests;
 
 namespace Checkout.Services.Controllers
 {
@@ -16,11 +16,6 @@ namespace Checkout.Services.Controllers
         {
             _logger = logger;
             _repository = repository;
-        }
-
-        public CheckoutController(List<CheckoutRequest> products)
-        {
-            this.products = products;
         }
 
         [HttpPost]
