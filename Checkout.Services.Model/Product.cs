@@ -1,15 +1,14 @@
-﻿namespace Checkout.Services.Model
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Checkout.Services.Model
 {
-    public class Product
+    class Product
     {
         public string model { get; set; }
-
-        public int unitPrice { get; set; }
-
-        public bool hasDiscount { get; set; }
-
-        public int? forUnits { get; set; }
-
-        public int? discountPrice { get; set; }
+        public string description { get; set; }
     }
 }

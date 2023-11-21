@@ -1,6 +1,6 @@
-﻿namespace Checkout.Services
+﻿namespace Checkout.Services.Model
 {
-    public class Product
+    public class ProductDetail
     {
         public string model { get; set; }
 

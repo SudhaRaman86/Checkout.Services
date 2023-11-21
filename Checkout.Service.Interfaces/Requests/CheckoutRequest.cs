@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Services.Interfaces.Requests
 {
-    internal class CheckoutRequest
+    public class CheckoutRequest
     {
          /// <summary>
          /// List of product selected for checkout
