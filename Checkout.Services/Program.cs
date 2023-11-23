@@ -1,26 +1,23 @@
 using Checkout.Repository;
 using Checkout.Services;
+using Microsoft.EntityFrameworkCore;
 using Service.Interface;
+using System.Data.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.PropertyNamingPolicy = null;
+}); ;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MapperProfile));
-builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddScoped<IRepository, Repository>();
-//builder.Services.AddDbContext<DbContext>(options =>
-//    options.UseSqlServer(connectionStringCore)
-//    .EnableDetailedErrors()
-//#if DEBUG
-//     .LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information)
-//            .EnableSensitiveDataLogging()
-//#endif
-//);
+//builder.Services.AddDbContext<Microsoft.EntityFrameworkCore.DbContext>();
 
 var app = builder.Build();
 

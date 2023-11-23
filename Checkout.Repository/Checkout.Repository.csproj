@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Checkout.Service.Interface\Checkout.Service.Interface.csproj" />
     <ProjectReference Include="..\Checkout.Service.Model\Checkout.Service.Model.csproj" />
     <ProjectReference Include="..\Checkout.Services.Utils\Checkout.Services.Utils.csproj" />

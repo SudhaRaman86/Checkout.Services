@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Service.Interface.Responses
 {
-    internal class CheckoutResponse
+    public class CheckoutResponse
     {
         /// <summary>
         /// The total amount after checkout
         /// </summary>
         public int price { get; set; }
+       
     }
 }

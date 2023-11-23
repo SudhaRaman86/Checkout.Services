@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Interface;
 using Service.Interface.Requests;
+using Service.Interface.Responses;
 
 namespace Checkout.Services.Controllers
 {
@@ -10,20 +11,20 @@ namespace Checkout.Services.Controllers
     {
         private readonly ILogger<CheckoutController> _logger;
         private readonly IRepository _repository;
-        List<CheckoutRequest> products;
-
-        public CheckoutController(ILogger<CheckoutController> logger, IRepository repository )
+      
+        public CheckoutController(IRepository repository, ILogger<CheckoutController> logger)
         {
             _logger = logger;
             _repository = repository;
         }
-
         [HttpPost]
-        public async Task<int> Checkout(List<string> products, CancellationToken cancellationToken = default)
+        [Produces("application/json")]
+        public async Task<CheckoutResponse> checkout(List<string> products, CancellationToken cancellationToken = default)
         {
             // _logger.LogInformation(Constants.TEMPLATE_INVOKE_WITH_PARAM, nameof(Checkout), nameof(filter), filter.ToJSON());
             //Check list is not null
-            return await _repository.Checkout(products, cancellationToken);
+           CheckoutResponse response = await _repository.Checkout(products, cancellationToken);
+           return response;
         }
     }
 }

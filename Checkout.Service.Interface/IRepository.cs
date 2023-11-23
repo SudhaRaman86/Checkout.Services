@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service.Interface.Responses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,6 @@ namespace Service.Interface
 {
      public interface IRepository
     {
-        Task<int> Checkout(List<string> product, CancellationToken cancellationToken);
+        Task<CheckoutResponse> Checkout(List<string> product, CancellationToken cancellationToken =default);
     }
 }
