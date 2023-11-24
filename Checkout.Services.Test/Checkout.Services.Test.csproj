@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Checkout.Repository\Checkout.Repository.csproj" />
     <ProjectReference Include="..\Checkout.Service.Model\Checkout.Service.Model.csproj" />
     <ProjectReference Include="..\Checkout.Services\Checkout.Services.csproj" />
   </ItemGroup>

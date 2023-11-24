@@ -1,8 +1,6 @@
 using Checkout.Repository;
 using Checkout.Services;
-using Microsoft.EntityFrameworkCore;
 using Service.Interface;
-using System.Data.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
 

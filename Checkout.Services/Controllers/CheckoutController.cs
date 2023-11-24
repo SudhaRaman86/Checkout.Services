@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Interface;
-using Service.Interface.Requests;
 using Service.Interface.Responses;
 
 namespace Checkout.Services.Controllers

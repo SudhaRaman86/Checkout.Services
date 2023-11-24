@@ -29,8 +29,8 @@ namespace Checkout.Repository
 
         void setProductDetails()
         {
-            //Setting up the productdetails here . this should be a table in database.
-            //AppDbContext's Dbset ProductDiscount is the table which has columns modelname, unitprice, hasiscount, forunits, discountprice
+            //Setting up the productdetails here.
+            //AppDbContext's Dbset ProductDiscount can be used
             ProductDetail _rolex = new ProductDetail() { model = "001", unitPrice = 100, hasDiscount = true, forUnits = 3, discountPrice = 200 };
             ProductDetail _mKors = new ProductDetail() { model = "002", unitPrice = 80, hasDiscount = true, forUnits = 2, discountPrice = 120 };
             ProductDetail _swatch = new ProductDetail() { model = "003", hasDiscount = false, unitPrice = 50 };
@@ -40,7 +40,7 @@ namespace Checkout.Repository
         }
         ProductDetail? getProductDetail(string model)
         {
-            // this would be a call to AppDbcontext's ProductDetail
+            // this could be a call to AppDbcontext's ProductDetail
             //var matchingmodel = await _context.ProductDetail
             //                               .AsNoTracking()
             //                               .Where(id => id.model == m )
