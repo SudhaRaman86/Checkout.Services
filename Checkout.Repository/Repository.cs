@@ -27,7 +27,7 @@ namespace Checkout.Repository
             _logger = logger;
         }
 
-        void setProductDetails()
+        public void setProductDetails()
         {
             //Setting up the productdetails here.
             //AppDbContext's Dbset ProductDiscount can be used
